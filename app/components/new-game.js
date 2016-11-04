@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         gameName: this.get('gameName') ? this.get('gameName') : "",
         image: this.get('image') ? this.get('image') : "https://dummyimage.com/600x400/000/fff.png&text=??",
         releaseDate: this.get('releaseDate') ? this.get('releaseDate') : "",
+        summary: this.get('summary') ? this.get('summary') : "",
         details: this.get('details') ? this.get('details') : "",
         timestamp: moment().valueOf(),
       };
@@ -23,6 +24,7 @@ export default Ember.Component.extend({
       this.set('image', "");
       this.set('releaseDate', "");
       this.set('details', "");
+      this.set('summary', "");
     }
   }
 });

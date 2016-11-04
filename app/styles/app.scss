@@ -1,2 +1,7 @@
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
+img {
+  max-width: 100%;
+  max-height: 50%;
+}

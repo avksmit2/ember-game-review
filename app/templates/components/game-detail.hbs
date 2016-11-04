@@ -1,14 +1,12 @@
 <div class="row">
-  <div class="col-sm-7">
+  <div class="col-sm-7" id="game">
     <h2>{{gameHeading}}</h2>
     <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
     <img src='{{game.image}}' alt="image of game">
     <h4>{{game.details}}</h4>
   </div>
-  <div class="col-sm-4">
+  <div class="col-sm-4" id="reviews">
     <h2><u>Reviews:</u> {{'new-review' game=game addReview="addReview"}}</h2>
-    {{log game.reviews.rating}}
-
     {{#if game.reviews}}
       <p>
         {{'review-tile' game=game}}

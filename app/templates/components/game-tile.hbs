@@ -5,7 +5,7 @@
         <img src='{{game.image}}' alt="image of game">
       </div>
       <div class="col-sm-6">
-        <h2>{{game.gameName}}</h2>
+        <h2>{{game.gameName}} <span class="small">({{game-rating game}} reviews)</span></h2>
         <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
         <h4>{{game.summary}}</h4>
       </div>

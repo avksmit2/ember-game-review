@@ -19,7 +19,6 @@ export default Ember.Route.extend({
       this.transitionTo('index');
     },
     addReview(params) {
-      debugger;
       var newReview = this.store.createRecord('review', params);
       var game = params.game;
       game.get('reviews').addObject(newReview);

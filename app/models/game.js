@@ -11,8 +11,7 @@ export default DS.Model.extend({
   reviews: DS.hasMany('review', {async: true}),
   ratings: Ember.computed.mapBy('reviews', 'rating'),
   totalRatings: Ember.computed.sum('ratings'),
-  avgRatings: Ember.computed('totalRatings', function() {
-    console.log(this.get('totalRatings'), this.get('reviews').get('length'))
-    return Math.round(this.get('totalRatings') / this.get('reviews').get('length'));
+  avgRatings: Ember.computed('totalRatings', 'ratings.length', function() {
+    return Math.round(this.get('totalRatings') / this.get('ratings.length'));
   })
 });

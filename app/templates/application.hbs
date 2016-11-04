@@ -14,7 +14,6 @@
     <div class="collapse navbar-collapse" id="main-nav-bar">
       <ul class="nav navbar-nav">
         {{#nav-link-to 'index' data-toggle='collapse' data-target='#main-nav-bar'}}Home{{/nav-link-to}}
-
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -28,7 +27,8 @@
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <footer>
-      {{#link-to 'index'}}Home{{/link-to}}
+      | {{#link-to 'index'}}Home{{/link-to}} |
+      {{#link-to 'about'}}About{{/link-to}} |
     </footer>
   </div>
 </nav>

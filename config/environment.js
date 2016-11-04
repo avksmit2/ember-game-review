@@ -22,7 +22,7 @@ module.exports = function(environment) {
       authDomain: "game-review-ac7b5.firebaseapp.com",
       databaseURL: "https://game-review-ac7b5.firebaseio.com",
       storageBucket: "game-review-ac7b5.appspot.com"
-    }
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

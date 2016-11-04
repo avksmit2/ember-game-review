@@ -8,5 +8,11 @@ export default DS.Model.extend({
   summary: DS.attr('string'),
   details: DS.attr('string'),
   timestamp: DS.attr(),
-  reviews: DS.hasMany('review', {async: true})
+  reviews: DS.hasMany('review', {async: true}),
+  ratings: Ember.computed.mapBy('reviews', 'rating'),
+  totalRatings: Ember.computed.sum('ratings'),
+  avgRatings: Ember.computed('totalRatings', function() {
+    console.log(this.get('totalRatings'), this.get('reviews').get('length'))
+    return Math.round(this.get('totalRatings') / this.get('reviews').get('length'));
+  })
 });

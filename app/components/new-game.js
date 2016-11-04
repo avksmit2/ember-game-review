@@ -15,6 +15,7 @@ export default Ember.Component.extend({
         releaseDate: this.get('releaseDate') ? this.get('releaseDate') : "",
         summary: this.get('summary') ? this.get('summary') : "",
         details: this.get('details') ? this.get('details') : "",
+        avgRating: this.get('avgRating') ? this.get('avgRating') : 0,
         timestamp: moment().valueOf(),
       };
       this.set('isShowingModal', false);

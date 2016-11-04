@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="col-sm-7" id="game">
-    <h2>{{gameHeading}}, <span class="small">({{reviewNumber}} reviews)</span></h2>
+    <h2>{{gameHeading}}, <span class="small">({{number-reviews game}} reviews, average rating = {{game.avgRatings}})</span></h2>
     <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
     <img src='{{game.image}}' alt="image of game">
     <h4>{{game.details}}</h4>

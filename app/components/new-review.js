@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     toggleModal() {
       this.toggleProperty('isShowingModal');
     },
-    addListing() {
+    addReview() {
       var params = {
         user: this.get('user') ? this.get('user') : "",
         rating: this.get('rating') ? this.get('rating') : "",
@@ -16,7 +16,7 @@ export default Ember.Component.extend({
         game: this.get('game')
       };
       this.set('isShowingModal', false);
-      this.sendAction("addListing", params);
+      this.sendAction("addReview", params);
       this.set('user', "");
       this.set('rating', "");
       this.set('comments', "");

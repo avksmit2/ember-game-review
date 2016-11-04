@@ -1,5 +1,8 @@
-<h4>{{reviewHeading}}</h4>
-<p>
-  {{review.rating}} thumbs up! <br>
-  {{review.comments}}
-</p>
+{{#each game.reviews as |review|}}
+  <h4>posted by: {{review.user}} {{moment-from-now review.timestamp}}</h4>
+  <p>
+    {{logmodel}}
+    {{review.rating}} thumbs up! <br>
+    {{review.comments}}
+  </p>
+{{/each}}

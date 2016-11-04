@@ -7,9 +7,13 @@
   </div>
   <div class="col-sm-4">
     <h2><u>Reviews:</u> {{'new-review' game=game addReview="addReview"}}</h2>
-    <p>
-      {{'review-tile' review=game.reviews}}
-    </p>
+    {{log game.reviews.rating}}
+
+    {{#if game.reviews}}
+      <p>
+        {{'review-tile' game=game}}
+      </p>
+    {{/if}}
   </div>
 </div>
 

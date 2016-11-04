@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  heading: Ember.computed('game.gameName', 'game.releaseDate', function() {
+  gameHeading: Ember.computed('game.gameName', 'game.releaseDate', function() {
     return this.get('game.gameName') + ', released on: ' + this.get('game.releaseDate');
   }),
   actions: {
@@ -12,6 +12,9 @@ export default Ember.Component.extend({
     },
     updateGame(game, params) {
       this.sendAction('updateGame', game, params);
+    },
+    addReview(params) {
+      this.sendAction('addReview', params);
     }
   }
 });

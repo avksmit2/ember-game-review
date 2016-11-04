@@ -1,0 +1,24 @@
+<button class="btn btn-success"{{action "toggleModal"}}>Add a Review</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <h1>New Review</h1>
+    <form {{action 'addReview' on="submit"}}>
+      <div class="form-group">
+        <label for="user">Username</label>
+        {{input value=user id="user" class="form-control" required="required"}}
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating: 1 to 5 (1 is bad, 5 is good)</label>
+        {{input value=rating id="rating" class="form-control" required="required"}}
+      </div>
+      <div class="form-group">
+        <label for="comments">Comments</label>
+        {{input value=comments id="comments" class="form-control"}}
+      </div>
+      <button class="btn btn-success">Add</button>
+    </form>
+  {{/modal-dialog}}
+{{/if}}

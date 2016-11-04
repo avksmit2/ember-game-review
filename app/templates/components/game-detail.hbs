@@ -1,7 +1,17 @@
-<h2>{{heading}}</h2>
-<p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
-<img src='{{game.image}}' alt="image of game">
-<h4>{{game.details}}</h4>
+<div class="row">
+  <div class="col-sm-7">
+    <h2>{{gameHeading}}</h2>
+    <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
+    <img src='{{game.image}}' alt="image of game">
+    <h4>{{game.details}}</h4>
+  </div>
+  <div class="col-sm-4">
+    <h2><u>Reviews:</u> {{'new-review' game=game addReview="addReview"}}</h2>
+    <p>
+      {{'review-tile' review=game.reviews}}
+    </p>
+  </div>
+</div>
 
 <div class="row">
   <div class="col-sm-3">

@@ -1,0 +1,10 @@
+{{#each game as |game|}}
+  <div class="row">
+    <div class="col-sm-4">
+      {{#link-to 'game' game_id}}<h2>{{game.gameName}}, <div class=small> release date: {{game.releaseDate}}</div></h2>{{/link-to}}
+      <p>Entered by {{game.user}} on {{game.timestamp}}</p>
+      <img src='{{game.image}}' alt="image of game">
+      <h4>{{game.details}}</h4>
+    </div>
+  </div>
+{{/each}}

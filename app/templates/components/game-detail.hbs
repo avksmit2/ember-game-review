@@ -1,0 +1,13 @@
+<h2>{{heading}}</h2>
+<p>Entered by {{game.user}} on {{moment-from-now game.timestamp}}</p>
+<img src='{{game.image}}' alt="image of game">
+<h4>{{game.details}}</h4>
+
+<div class="row">
+  <div class="col-sm-3">
+    <button {{action 'destroyGame' game}} class="btn btn-danger">Delete game</button>
+  </div>
+  <div class="col-sm-3">
+    {{update-game game=game updateGame="updateGame"}}
+  </div>
+</div>

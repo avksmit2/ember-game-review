@@ -4,7 +4,7 @@ export default DS.Model.extend({
   user: DS.attr('string'),
   gameName: DS.attr('string'),
   image: DS.attr(),
-  releaseDate: DS.attr('date'),
+  releaseDate: DS.attr(),
   summary: DS.attr('string'),
   details: DS.attr('string'),
   timestamp: DS.attr(),

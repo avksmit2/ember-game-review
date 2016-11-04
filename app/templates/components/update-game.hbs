@@ -1,1 +1,38 @@
-{{yield}}
+<button {{action "toggleModal"}} class="btn btn-warning">Update Game</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <h1>Update Game</h1>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="user">User Name: </label>
+          {{input value=game.user id="user" class="form-control" }}
+        </div>
+        <div class="form-group">
+          <label for="gameName">Game Name: </label>
+          {{input value=game.gameName id="gameName" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="image">Game Image: </label>
+          {{input value=game.image id="image" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="releaseDate">Release Date: </label>
+          {{input value=game.releaseDate id="releaseDate" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="details">Game Details: </label>
+          {{input value=game.details id="details" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="summary">Game Summary: </label>
+          {{input value=game.summary id="summary" class="form-control"}}
+        </div>
+        <button  {{action 'updateGame' game}} class="btn btn-success">Save</button>
+      </form>
+    </div>
+  {{/modal-dialog}}
+{{/if}}

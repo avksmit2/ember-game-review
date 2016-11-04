@@ -1,7 +1,22 @@
-# Game-review
+# PC Game Review
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+###_This is a site to write reviews for PC games._ {November 4, 2016}
+
+### By _**Angela Smith**_
+
+## Description
+
+_This application will allow users to rate PC games and write reviews. The site uses an Ember service so the users can create a list of their favorite games. The users can also enter a new game to review._
+
+## Specifications
+
+| Behavior          | Input    | Output |
+| ----------------- | -------- | ------ |
+| User can enter a new review for an existing game on the site | This game is awesome! | Fallout 4: This game is awesome! |
+| User can enter a new game to review | Outbreak | Outbreak |
+| User can udpate an existing game | Fallout 4, Fallout 3 | Fallout 3 |
+| A review can be deleted or updated | This game is awesome! | "" |
+| User can create a list of their favorite games | Fallout 4, Fallout 3, Skyrim, TF2 | Fallout 4, Fallout 3, Skyrim, TF2 |
 
 ## Prerequisites
 
@@ -16,7 +31,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd game-review`
+* `cd message-board`
 * `npm install`
 * `bower install`
 
@@ -25,29 +40,16 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+## Technologies used
 
-Make use of the many generators for code, try `ember help generate` for more details
+_SASS,
+Bootstrap,
+Bower,
+Firebase,
+Ember
 
-### Running Tests
+### License
 
-* `ember test`
-* `ember test --server`
+*This webpage is licensed under the MIT license.*
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Copyright (c) 2016 _**Angela Smith**_

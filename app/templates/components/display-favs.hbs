@@ -1,14 +1,11 @@
-{{#each game as |game|}}
+<button class="btn"{{action "toggleModal"}}>See Favorite Games</button>
 
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{#each favCart.games as |game|}}
     <div class="row summary">
-      {{#if game.inCart}}
-        <p> Game added to favorites! </p>
-      {{else}}
-        <br />
-        <button {{action 'addToCart' game}}>Add game to favorites</button>
-      {{/if}}
-      {{#link-to 'game' game.id}}
-
       <div class="col-sm-6">
         <img src='{{game.image}}' alt="image of game">
       </div>
@@ -17,7 +14,7 @@
         <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
         <h4>{{game.summary}}</h4>
       </div>
-      {{/link-to}}
-
     </div>
-{{/each}}
+    {{/each}}
+  {{/modal-dialog}}
+{{/if}}

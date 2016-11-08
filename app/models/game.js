@@ -13,5 +13,10 @@ export default DS.Model.extend({
   totalRatings: Ember.computed.sum('ratings'),
   avgRatings: Ember.computed('totalRatings', 'ratings.length', function() {
     return Math.round(this.get('totalRatings') / this.get('ratings.length'));
+  }),
+
+  favCart: Ember.inject.service(),
+  inCart: Ember.computed('favCart.games.[]', function(){
+      return this.get('favCart').includes(this);
   })
 });

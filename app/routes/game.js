@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('game', params.game_id)
   },
+  favCart: Ember.inject.service(),
   actions: {
     updateGame(game, params) {
       Object.keys(params).forEach(function(key) {
@@ -37,6 +38,10 @@ export default Ember.Route.extend({
     },
     destroyReview(review) {
       review.destroyRecord();
+    },
+    addToCart(game) {
+      console.log(game);
+      this.get('favCart').add(game);
     }
   }
 });

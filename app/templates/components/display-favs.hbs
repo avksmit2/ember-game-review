@@ -4,6 +4,7 @@
   {{#modal-dialog close="toggleModal"
                   targetAttachment="center"
                   translucentOverlay=true}}
+    <button {{action "closeModal"}} class="btn btn-info">Close</button>              
     {{#each favCart.games as |game|}}
     <div class="row summary">
       <div class="col-sm-6">

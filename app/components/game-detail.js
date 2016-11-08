@@ -6,15 +6,12 @@ export default Ember.Component.extend({
   }),
   actions: {
     destroyGame(game) {
-      if (confirm ('Are you sure youw ant to delete this game?')) {
+      if (confirm ('Are you sure you want to delete this game?')) {
         this.sendAction('destroyGame', game);
       }
     },
     updateGame(game, params) {
       this.sendAction('updateGame', game, params);
-    },
-    addReview(params) {
-      this.sendAction('addReview', params);
     }
   }
 });

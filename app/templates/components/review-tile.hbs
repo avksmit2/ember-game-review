@@ -5,4 +5,13 @@
     {{review.rating}} thumbs up! <br>
     {{review.comments}}
   </p>
+  <div class="row">
+    <div class="col-sm-3">
+      {{'update-review' review=review updateReview="updateReview"}}
+    </div>
+    <div class="col-sm-3">
+      <button {{action 'destroyReview' review}} class="btn btn-danger btn-xs">Delete review</button>
+    </div>
+  </div>
+
 {{/each}}

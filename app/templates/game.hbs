@@ -1,1 +1,14 @@
-{{game-detail game=model updateGame="updateGame" destroyGame="destroyGame" addReview="addReview"}}
+<div class="row">
+  <div class="col-sm-7 game">
+    {{game-detail game=model updateGame="updateGame" destroyGame="destroyGame" addReview="addReview"}}
+  </div>
+  <div class="col-sm-4" id="reviews">
+    <h2 class="text-center"><u>Reviews:</u></h2>
+    {{'new-review' game=model addReview="addReview"}}
+    {{#if model.reviews}}
+      <p>
+        {{'review-tile' game=model updateReview="updateReview" destroyReview="destroyReview"}}
+      </p>
+    {{/if}}
+  </div>
+</div>

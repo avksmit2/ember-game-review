@@ -25,6 +25,18 @@ export default Ember.Route.extend({
       newReview.save().then(function() {
         return game.save();
       });
+    },
+    updateReview(review, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          review.set(key, params[key]);
+        }
+      });
+      review.save();
+      this.transitionTo('review', review.id);
+    },
+    destroyReview(review) {
+      review.destroyRecord();
     }
   }
 });

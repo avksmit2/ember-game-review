@@ -1,25 +1,12 @@
 <div class="row">
-  <div class="row">
-    <div class="col-sm-2">
-      {{update-game game=game updateGame="updateGame"}}
-    </div>
-    <div class="col-sm-2">
-      <button {{action 'destroyGame' game}} class="btn btn-danger">Delete game</button>
-    </div>
+  <div class="col-sm-2">
+    {{update-game game=game updateGame="updateGame"}}
   </div>
-  <div class="col-sm-7" id="game">
-    <h2>{{gameHeading}}, <span class="small">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
-    <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
-    <img src='{{game.image}}' alt="image of game">
-    <h4>{{game.details}}</h4>
-  </div>
-  <div class="col-sm-4" id="reviews">
-    <h2 class="text-center"><u>Reviews:</u></h2>
-    {{'new-review' game=game addReview="addReview"}}
-    {{#if game.reviews}}
-      <p>
-        {{'review-tile' game=game}}
-      </p>
-    {{/if}}
+  <div class="col-sm-2">
+    <button {{action 'destroyGame' game}} class="btn btn-danger">Delete game</button>
   </div>
 </div>
+<h2>{{gameHeading}}, <span class="small">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
+<p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
+<img src='{{game.image}}' alt="image of game">
+<h4>{{game.details}}</h4>

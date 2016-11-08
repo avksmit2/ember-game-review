@@ -1,0 +1,26 @@
+<button {{action "toggleModal"}} class="btn btn-warning btn-xs">Update Review</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    <h1>Update Review</h1>
+    <div class="container">
+      <form>
+        <div class="form-group">
+          <label for="user">Username</label>
+          {{input value=review.user id="user" class="form-control"}}
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating: 1 to 5 (1 is bad, 5 is good)</label>
+          {{input value=review.rating id="rating" class="form-control" type="number" min=1 max=5}}
+        </div>
+        <div class="form-group">
+          <label for="comments">Comments</label>
+          {{input value=review.comments id="comments" class="form-control"}}
+        </div>
+        <button  {{action 'updateReview' review}} class="btn btn-success">Save</button>
+      </form>
+    </div>
+  {{/modal-dialog}}
+{{/if}}

@@ -1,6 +1,6 @@
 # PC Game Review
 
-###_This is a site to write reviews for PC games._ {November 4, 2016}
+###_This is a site to write reviews for PC games._ November 4, 2016
 
 ### By _**Angela Smith**_
 

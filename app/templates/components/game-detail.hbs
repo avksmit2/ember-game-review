@@ -1,12 +1,12 @@
 <div class="row">
-  <div class="col-sm-2">
+  <div class="col-sm-4">
     {{update-game game=game updateGame="updateGame"}}
   </div>
-  <div class="col-sm-2">
+  <div class="col-sm-4">
     <button {{action 'destroyGame' game}} class="btn btn-danger">Delete game</button>
   </div>
 </div>
-<h2>{{gameHeading}}, <span class="small">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
+<h2>{{gameHeading}}, <span class="rev_rating">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
 <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
 <img src='{{game.image}}' alt="image of game">
 <h4>{{game.details}}</h4>

@@ -1,7 +1,7 @@
 {
   "name": "game-review",
   "version": "0.0.0",
-  "description": "Small description for game-review goes here",
+  "description": "This is a site to write reviews for PC games",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -16,7 +16,7 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "author": "",
+  "author": "Angela Smith",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",

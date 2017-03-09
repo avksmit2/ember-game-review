@@ -8,29 +8,27 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <!-- {{#link-to 'index' class="navbar-brand"}}Map-touch{{/link-to}} -->
+      <a class="navbar-brand name" href="#">PC Game Review</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-nav-bar">
-      <ul class="nav navbar-nav">
-        {{#nav-link-to 'index' data-toggle='collapse' data-target='#main-nav-bar'}}Home{{/nav-link-to}}
+      <ul class="nav navbar-nav navbar-right">
+        {{#nav-link-to 'index' data-toggle='collapse' data-target='#main-nav-bar'}}Games{{/nav-link-to}}s
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 
-<header class="text-center jumbotron">
-  <h1>PC Game Review</h1>
+<header class="text-center well">
+  <!-- <h1>PC Game Review</h1> -->
 </header>
 <div class="container">
-  {{display-favs}}
-  <br>
   {{outlet}}
 </div>
 <nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <footer>
-      | {{#link-to 'index'}}Home{{/link-to}} |
+      | {{#link-to 'index'}}Games{{/link-to}} |
       {{#link-to 'about'}}About{{/link-to}} |
     </footer>
   </div>

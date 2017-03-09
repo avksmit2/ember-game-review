@@ -1,12 +1,12 @@
 # PC Game Review
 
-###_This is a site to write reviews for PC games._ November 4, 2016
+###_This is a site to write reviews for PC games. November 4, 2016_
 
 ### By _**Angela Smith**_
 
 ## Description
 
-_This application will allow users to rate PC games and write reviews. The site uses an Ember service so the users can create a list of their favorite games. The users can also enter a new game to review._
+_This application will allow users to rate PC games and write reviews. The users can also enter a new game to review._
 
 ## Specifications
 
@@ -16,7 +16,6 @@ _This application will allow users to rate PC games and write reviews. The site 
 | User can enter a new game to review | Outbreak | Outbreak |
 | User can udpate an existing game | Fallout 4, Fallout 3 | Fallout 3 |
 | A review can be deleted or updated | This game is awesome! | "" |
-| User can create a list of their favorite games | Fallout 4, Fallout 3, Skyrim, TF2 | Fallout 4, Fallout 3, Skyrim, TF2 |
 
 ## Prerequisites
 
@@ -30,8 +29,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd message-board`
+* `git clone <https://github.com/avksmit2/ember-game-review>` this repository
 * `npm install`
 * `bower install`
 

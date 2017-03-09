@@ -1,11 +1,5 @@
 <div class="row">
   <div class="col-sm-7" id="game">
-    {{#if model.inCart}}
-      <p> Game added to favorites! </p>
-    {{else}}
-      <br />
-      <button {{action 'addToCart' model}}>Add game to favorites</button>
-    {{/if}}
     {{game-detail game=model updateGame="updateGame" destroyGame="destroyGame" addReview="addReview"}}
   </div>
   <div class="col-sm-4" id="reviews">

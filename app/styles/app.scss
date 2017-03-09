@@ -2,7 +2,12 @@
 @import "ember-modal-dialog/ember-modal-appearance";
 
 body {
-  padding-bottom: 5vh;
+  padding-bottom: 30px;
+  margin-top: 15px;
+}
+
+.name {
+  font-size: 3em;
 }
 
 img {
@@ -24,4 +29,8 @@ img {
   border: solid gray;
   max-height: 900px;
   overflow: auto;
+}
+
+.navbar-fixed-bottom {
+  margin-bottom: -25px;
 }

@@ -1,23 +1,15 @@
 {{#each game as |game|}}
 
     <div class="row summary">
-      {{#if game.inCart}}
-        <p> Game added to favorites! </p>
-      {{else}}
-        <br />
-        <button {{action 'addToCart' game}}>Add game to favorites</button>
-      {{/if}}
       {{#link-to 'game' game.id}}
-
-      <div class="col-sm-6">
-        <img src='{{game.image}}' alt="image of game">
-      </div>
-      <div class="col-sm-6">
-        <h2>{{game.gameName}} <span class="small">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
-        <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
-        <h4>{{game.summary}}</h4>
-      </div>
+        <div class="col-sm-6">
+          <img src='{{game.image}}' alt="image of game">
+        </div>
+        <div class="col-sm-6">
+          <h2>{{game.gameName}} <span class="small">({{number-reviews game}} reviews, average rating = {{game-rating game.avgRatings}})</span></h2>
+          <p>Entered by {{game.user}} {{moment-from-now game.timestamp}}</p>
+          <h4>{{game.summary}}</h4>
+        </div>
       {{/link-to}}
-
     </div>
 {{/each}}
